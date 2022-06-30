@@ -27,8 +27,8 @@ jobs:
 #    environment: development
     uses: qiot-project/qiot-ubi-all-reusable-workflows/.github/workflows/app-snapshot.yml@main
     # To pass named inputs to a called workflow, use the "with" keyword in a job.
-    with:
-      JVM: true
+    # with:
+      # JVM: false # Optional - Default true - Enable this input variable if you need your Quarkus app to be compiled in JVM_MODE 
     # Use the "secrets" keyword to pass named secrets.
     secrets:
       ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
